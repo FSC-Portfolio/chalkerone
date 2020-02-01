@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="content">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+                <h1>Registered Players</h1>
+                <ul>
+                    {% for player in object_list %}
+                    <li><a href="{% url 'view-single-player' player.pk %}">{{ player.big_name }}</a></li>
+                    {% endfor %}
+                </ul>
+          </div>
+        </div>
+        <!-- divider -->
+        <div class="row">
+          <div class="span12">
+            <div class="solidline">
+            </div>
+          </div>
+        </div>
+        <!-- end divider -->
+
+      </div>
+    </section>
+
+{% endblock content %}

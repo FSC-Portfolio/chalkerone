@@ -1,0 +1,18 @@
+{% load static %}
+
+{% include 'header.html' %}
+
+    <main id="content">
+    {% block content %}
+    {% endblock content %}
+
+    {#<hr class="sep border-primary">#}
+
+    </main>
+
+{% include 'footer.html' %}
+
+{% include 'scripts_to_load.html' %}
+
+</body>
+</html>
