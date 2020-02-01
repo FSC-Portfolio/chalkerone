@@ -1,5 +1,6 @@
 {% load static %}
-
+{% load socialaccount %}
+{% providers_media_js %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +14,12 @@
 <p>We will delete all of your data upon request, with exception of data that is linked to other playes statistics, in which case
 <br>Only the bare minimal data required to ensure other players stats are not skewed, will be maintained and anonymised.</p>
 <p>Any queries plase get in touch.</p>
+
+<a href="{% provider_login_url "facebook" method="js_sdk" %}">Login Button image</a>
+<a href="{% provider_login_url "facebook" method="js_sdk" %}" class="btn btn-block btn-social btn-facebook" style="background-color:#3b5998;text-align:center">
+  <span class="fa fa-facebook"></span>
+               Sign in with Facebook
+ </a>
 {% block content %}
 
     {% endblock content %}
