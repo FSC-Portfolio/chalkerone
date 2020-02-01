@@ -1,23 +1,37 @@
+{% extends 'base.html' %}
 {% load static %}
 {% load socialaccount %}
 {% providers_media_js %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Privacy Statement</title>
-</head>
-<body>
-<h1>required for Facebook Integration</h1>
-<p>We will not sell your data</p>
-<p>You own your data</p>
-<p>We will delete all of your data upon request, with exception of data that is linked to other playes statistics, in which case
-<br>Only the bare minimal data required to ensure other players stats are not skewed, will be maintained and anonymised.</p>
-<p>Any queries plase get in touch.</p>
 
-<a href="{% provider_login_url "facebook" method="js_sdk" %}">Login Button image</a>
 {% block content %}
 
-    {% endblock content %}
-</body>
-</html>
+
+
+
+<section id="content">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+                <h1>required for Facebook Integration</h1>
+                <p>We will not sell your data</p>
+                <p>You own your data</p>
+                <p>We will delete all of your data upon request, with exception of data that is linked to other playes statistics, in which case
+                <br>Only the bare minimal data required to ensure other players stats are not skewed, will be maintained and anonymised.</p>
+                <p>Any queries plase get in touch.</p>
+          </div>
+        </div>
+        <!-- divider -->
+        <div class="row">
+          <div class="span12">
+            <div class="solidline">
+            </div>
+          </div>
+        </div>
+        <!-- end divider -->
+
+
+
+      </div>
+    </section>
+
+{% endblock content %}
