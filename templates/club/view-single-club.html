@@ -8,8 +8,8 @@
           <div class="span12">
                 <h3>{{object.club_name}}</h3>
                 <ul>
-                    {% for player in club.home_club.all %}
-                    <li>{{player.big_name}}</li>
+                    {% for club in dartclub.home_club.get_queryset %}
+                    <li>{{club}}</li>
                     {% endfor %}
                 </ul>
           </div>
