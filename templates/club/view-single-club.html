@@ -6,10 +6,10 @@
       <div class="container">
         <div class="row">
           <div class="span12">
-                <h1>Registered Players</h1>
+                <h3>{{object.club_name}}</h3>
                 <ul>
-                    {% for player in object_list %}
-                    <li><a href="{% url 'view_single_player' player.pk %}">{{ player.big_name }}</a></li>
+                    {% for club in dartclub.home_club.get_queryset %}
+                    <li>{{club}}</li>
                     {% endfor %}
                 </ul>
           </div>
