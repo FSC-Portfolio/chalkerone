@@ -1,10 +1,9 @@
 from django.urls import path
 # from .views import HomePageView, HelpPageView, NotFound, ViewMyProfile
-from .views import PrivacyPageView
+from .views import PrivacyPageView, HomePageView
 
 urlpatterns = [
-    # path('', HomePageView.as_view(), name='home'),
-    path('', PrivacyPageView.as_view(), name='privacy'),
+    path('', HomePageView.as_view(), name='home'),
     path('privacy', PrivacyPageView.as_view(), name='privacy'),
     # path('help', HelpPageView.as_view(), name='help'),
     # path('tournament', NotFound.as_view(), name='404'),

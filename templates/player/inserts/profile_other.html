@@ -1,0 +1,261 @@
+{% load static %}
+{% block content %}
+
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <div class="inner-heading">
+                    <h2>{{object.big_name}}</h2>
+                </div>
+            </div>
+            <div class="span8">
+                <ul class="breadcrumb">
+                    <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+                    <li><a href="#">Players</a><i class="icon-angle-right"></i></li>
+                    <li class="active">Your profile</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <aside class="left-sidebar">
+{#                    <div class="widget">#}
+{#                        <form class="form-search">#}
+{#                            <input placeholder="Type something" type="text" class="input-medium search-query">#}
+{#                            <button type="submit" class="btn btn-square btn-theme">Search</button>#}
+{#                        </form>#}
+{#                    </div>#}
+{#                    <div class="widget">#}
+{#                        <h5 class="widgetheading">Categories</h5>#}
+{#                        <ul class="cat">#}
+{#                            <li><i class="icon-angle-right"></i><a href="#">Web design</a><span> (20)</span></li>#}
+{#                            <li><i class="icon-angle-right"></i><a href="#">Online business</a><span> (11)</span></li>#}
+{#                            <li><i class="icon-angle-right"></i><a href="#">Marketing strategy</a><span> (9)</span></li>#}
+{#                            <li><i class="icon-angle-right"></i><a href="#">Technology</a><span> (12)</span></li>#}
+{#                            <li><i class="icon-angle-right"></i><a href="#">About finance</a><span> (18)</span></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                    <div class="widget">#}
+{#                        <h5 class="widgetheading">Latest posts</h5>#}
+{#                        <ul class="recent">#}
+{#                            <li>#}
+{#                                <img src="img/dummies/blog/65x65/thumb1.jpg" class="pull-left" alt=""/>#}
+{#                                <h6><a href="#">Lorem ipsum dolor sit</a></h6>#}
+{#                                <p>#}
+{#                                    Mazim alienum appellantur eu cu ullum officiis pro pri#}
+{#                                </p>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <img src="img/dummies/blog/65x65/thumb2.jpg" class="pull-left" alt=""/>#}
+{#                                <h6><a href="#">Maiorum ponderum eum</a></h6>#}
+{#                                <p>#}
+{#                                    Mazim alienum appellantur eu cu ullum officiis pro pri#}
+{#                                </p>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <img src="img/dummies/blog/65x65/thumb3.jpg" class="pull-left" alt=""/>#}
+{#                                <h6><a href="#">Et mei iusto dolorum</a></h6>#}
+{#                                <p>#}
+{#                                    Mazim alienum appellantur eu cu ullum officiis pro pri#}
+{#                                </p>#}
+{#                            </li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                    <div class="widget">#}
+{#                        <h5 class="widgetheading">Popular tags</h5>#}
+{#                        <ul class="tags">#}
+{#                            <li><a href="#">Web design</a></li>#}
+{#                            <li><a href="#">Trends</a></li>#}
+{#                            <li><a href="#">Technology</a></li>#}
+{#                            <li><a href="#">Internet</a></li>#}
+{#                            <li><a href="#">Tutorial</a></li>#}
+{#                            <li><a href="#">Development</a></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+                </aside>
+            </div>
+            <div class="span8">
+                <article>
+                    <div class="row">
+                        <div class="span8">
+
+                            <!-- author info -->
+                            <div class="about-author">
+                                <a href="#" class="thumbnail align-left"><img src="{% static 'img/avatar.png'%}" alt=""/></a>
+                                <h5><strong><a href="#">{{object.big_name}}</a></strong></h5>
+                                <p>
+                                    Last played [playername] and [won/lost] by [points]. Our statistics show your closest matched player is [playername].
+                                    you rank 3489483 in the system behind [playername] and in front of [playername]
+                                </p>
+                            </div>
+                            <blockquote>
+                                <i class="icon-quote-left"></i> Doesn't mind letting the world know when he's won a game!
+                            </blockquote>
+                            <div class="post-image">
+{#                                <div class="post-heading">#}
+{#                                    <h3><a href="#">Statistics</a></h3>#}
+{#                                </div>#}
+{#                                <img src="{%  static 'img/dummies/blog/img1.jpg'%}" alt=""/>#}
+                            </div>
+                            <h4>Statistics Comparison [Coming soon]</h4>
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Stat</th>
+                                    <th>{{object.big_name}}</th>
+                                    <th>{{ user.username }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Name</td>
+                                    <td>{{object.player}}</td>
+                                    <td>{{ user.id }}</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Win percent</td>
+                                    <td>{{object.win_percent}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Total games played</td>
+                                    <td>{{object.games_played}}</td>
+                                    <td>.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>4</td>
+                                    <td>Total wins</td>
+                                    <td>{{object.total_wins}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Total score</td>
+                                    <td>{{object.games_played}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Total darts thrown</td>
+                                    <td>{{object.total_darts_thrown}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Points Per Dart (PPD)</td>
+                                    <td>{{object.points_per_dart}}</td>
+                                    <td>.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>8</td>
+                                    <td>Six Dart Out (6DO)</td>
+                                    <td>{{object.six_dart_out}}</td>
+                                    <td>.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>9</td>
+                                    <td>Seven Dart Out (7DO)</td>
+                                    <td>{{object.seven_dart_out}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Eight Dart Out (8DO)</td>
+                                    <td>{{object.eight_dart_out}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Nine Dart Out (9DO)</td>
+                                    <td>{{object.nine_dart_out}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>Four Round Out (4RO)</td>
+                                    <td>{{object.four_round_out}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>180's</td>
+                                    <td>{{object.triple_treble_twenty}}</td>
+                                    <td>.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>14</td>
+                                    <td>Treble Bed</td>
+                                    <td>{{object.triple_treble_other}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>Half Ton</td>
+                                    <td>{{object.half_ton}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>Low Ton</td>
+                                    <td>{{object.low_ton}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>High Ton</td>
+                                    <td>{{object.high_ton}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td>170 Peg</td>
+                                    <td>{{object.one_seventy_peg}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>171's</td>
+                                    <td>{{object.one_seven_one}}</td>
+                                    <td>.</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>Notes</td>
+                                    <td>{{object.cc_notes}}</td>
+                                    <td>.</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+{#                            <div class="bottom-article">#}
+{#                                <ul class="meta-post">#}
+{#                                    <li><i class="icon-user"></i><a href="#"> Admin</a></li>#}
+{#                                    <li><i class="icon-folder-open"></i><a href="#"> Blog</a></li>#}
+{#                                    <li><i class="icon-tags"></i><a href="#">Web design</a></li>#}
+{#                                </ul>#}
+{#                            </div>#}
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
