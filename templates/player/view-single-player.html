@@ -2,45 +2,19 @@
 {% load static %}
 {% block content %}
 
-<section id="content">
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-                <h3>{{object.big_name}}</h3>
-                <ul>
-                    <li>{{object.player}}</li>
-                    <li>{{object.win_percent}}%</li>
-                    <li>{{object.games_played}} games played</li>
-                    <li>{{object.total_wins}} total wins</li>
-                    <li>{{object.total_Score}} total score</li>
-                    <li>{{object.total_darts_thrown}} total darts thrown</li>
-                    <li>{{object.points_per_dart}} points per dart</li>
-                    <li>{{object.six_dart_out}} 6DO</li>
-                    <li>{{object.seven_dart_out}} 7DO</li>
-                    <li>{{object.eight_dart_out}} 8DO</li>
-                    <li>{{object.nine_dart_out}} 9DO</li>
-                    <li>{{object.four_round_out}} 4RO</li>
-                    <li>{{object.triple_treble_twenty}} 180's</li>
-                    <li>{{object.triple_treble_other}} Bed</li>
-                    <li>{{object.half_ton}} Half Ton</li>
-                    <li>{{object.low_ton}} Low Ton</li>
-                    <li>{{object.high_ton}} High Ton</li>
-                    <li>{{object.one_seventy_peg}} 170 Peg</li>
-                    <li>{{object.one_seven_one}} 171's</li>
-                    <li>Notes:<br>{{object.cc_notes}} </li>
-                </ul>
-          </div>
-        </div>
-        <!-- divider -->
-        <div class="row">
-          <div class="span12">
-            <div class="solidline">
-            </div>
-          </div>
-        </div>
-        <!-- end divider -->
 
-      </div>
-    </section>
+{% if user.is_authenticated %}
+    {% if user.id == object.id %}
+{# Show the player profile#}
+
+        {% include 'player/inserts/profile.html' %}
+    {% endif %}
+        {% include 'player/inserts/profile_other.html' %}
+    {% else %}
+    <h3>Sorry, you need to be logged in to view player information.</h3>
+{# Compare the player's profiles.#}
+{% endif %}
+
+
 
 {% endblock content %}
