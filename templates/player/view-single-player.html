@@ -8,10 +8,11 @@
 {# Show the player profile#}
 
         {% include 'player/inserts/profile.html' %}
-    {% endif %}
-        {% include 'player/inserts/profile_other.html' %}
     {% else %}
-    <h3>Sorry, you need to be logged in to view player information.</h3>
+        {% include 'player/inserts/profile_other.html' %}
+    {% endif %}
+{% else %}
+<h3>Sorry, you need to be logged in to view player information.</h3>
 {# Compare the player's profiles.#}
 {% endif %}
 
