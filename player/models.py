@@ -4,10 +4,34 @@ from api_v0.models import BaseModel
 
 
 class PlayerStatistic(BaseModel):
+    CLUB_POSITION = (
+        ('PRES', 'President'),
+        ('VPRE', 'Vice President'),
+        ('TRES', 'Treasurer'),
+        ('SECR', 'Secretary'),
+        ('MEMB', 'Member'),
+        ('OTHE', 'Other'),
+    )
+
     player = models.OneToOneField(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         related_name='player_stat'
+    )
+
+    player_club = models.ForeignKey(
+        'club.DartClub',
+        on_delete=models.CASCADE,
+        related_name='home_club',
+        blank=True,
+        null=True,
+    )
+
+    club_position = models.CharField(
+        choices=CLUB_POSITION,
+        max_length=22,
+        blank=True,
+        null=True,
     )
 
     big_name = models.CharField(
@@ -33,7 +57,7 @@ class PlayerStatistic(BaseModel):
         blank=True,
     )
 
-    total_Score = models.IntegerField(
+    total_score = models.IntegerField(
         default=0,
         blank=True,
     )

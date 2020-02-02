@@ -6,12 +6,19 @@
       <div class="container">
         <div class="row">
           <div class="span12">
-                <h1>Registered Players</h1>
+            <h1>Registered Clubs</h1>
+
+                {% for club in object_list %}
+              <h2><a href="{% url 'view_single_club' club.pk %}">{{ club.club_name }}</a></h2>
                 <ul>
-                    {% for player in object_list %}
-                    <li><a href="{% url 'view_single_player' player.pk %}">{{ player.big_name }}</a></li>
-                    {% endfor %}
+                    <li>Established: {{ club.date_established }}</li>
+                    <li>{{ club.get_club_status_display }}</li>
+                    <li>Fees: {{ club.club_member_fees }}</li>
+                    <li>Meets: {{ club.get_club_meeting_frequency_display }}</li>
+
                 </ul>
+                {% endfor %}
+
           </div>
         </div>
         <!-- divider -->
