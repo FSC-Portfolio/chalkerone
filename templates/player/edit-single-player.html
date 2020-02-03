@@ -59,7 +59,10 @@
 {#                                <img src="{%  static 'img/dummies/blog/img1.jpg'%}" alt=""/>#}
                             </div>
 
-                            {% include 'player/inserts/statistics_table.html' %}
+                            <form action="" method="post">{% csrf_token %}
+                                {{ form.as_p }}
+                                <input type="submit" value="Update" />
+                            </form>
 
 
 
