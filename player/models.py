@@ -138,6 +138,6 @@ class PlayerStatistic(BaseModel):
         blank=True,
         null=True,
     )
-
-    def __str__(self):
-        return self.big_name
+    #
+    # def __str__(self):
+    #     return self.big_name
