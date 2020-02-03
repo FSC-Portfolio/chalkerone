@@ -20,8 +20,8 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
-    path('p/', include('player.urls')),
-    path('c/', include('club.urls')),
+    path('player/', include('player.urls')),
+    path('club/', include('club.urls')),
     url(r'^accounts/',include('allauth.urls')),
     # path('accounts/', include('allauth.urls')),
 ]

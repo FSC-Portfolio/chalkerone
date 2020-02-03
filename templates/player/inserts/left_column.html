@@ -1,0 +1,119 @@
+{% load static %}
+<aside class="left-sidebar">
+    <div class="widget">
+        <form class="form-search">
+            <input placeholder="Type something" type="text" class="input-medium search-query">
+            <button type="submit" class="btn btn-square btn-theme">Search</button>
+        </form>
+    </div>
+    <div class="widget">
+        <h5 class="widgetheading">My Last 5 Games</h5>
+        <ul class="cat">
+            <li><i class="icon-double-angle-down"></i><a href="#">Seamus</a><span> (-20)</span></li>
+            <li><i class="icon-double-angle-down"></i><a href="#">Kingy</a><span> (-12)</span></li>
+            <li><i class="icon-double-angle-up"></i><a href="#">Johnno</a><span> (9)</span></li>
+            <li><i class="icon-double-angle-up"></i><a href="#">Adam</a><span> (12)</span></li>
+            <li><i class="icon-double-angle-down"></i><a href="#">Angry Horse</a><span> (-35)</span></li>
+        </ul>
+    </div>
+    <div class="widget">
+        <h5 class="widgetheading">My Leaderboard (Overall)</h5>
+        <ul class="recent">
+            <li>
+                <img src="{% static 'img/team/tp_65.png'%}" class="pull-left" alt=""/>
+                <h6><a href="#">24,090</a></h6>
+                <p>
+                    timpower90
+                </p>
+            </li>
+            <li>
+                <img src="{% static 'img/team/jl_65.png'%}" class="pull-left" alt=""/>
+                <h6><a href="#">24,089</a></h6>
+                <p>
+                    lavren55
+                </p>
+            </li>
+            <li>
+                <img src="{% static 'img/team/nr_65.png'%}" class="pull-left" alt=""/>
+                <h6><a href="#">24,088</a></h6>
+                <p>
+                    pivitparkour94
+                </p>
+            </li>
+            <li>
+                <img src="{% static 'img/team/jt_65.png'%}" class="pull-left" alt=""/>
+                <h6><a href="#">24,087</a></h6>
+                <p>
+                    jtcodegod
+                </p>
+            </li>
+            <li>
+                <img src="{% static 'img/team/jr_65.png'%}" class="pull-left" alt=""/>
+                <h6><a href="#">24,086</a></h6>
+                <p>
+                    {{ object.big_name }}
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="widget">
+        <h5 class="widgetheading">My Leaderboard (Club)</h5>
+        <ul class="recent">
+            <li>
+                <img src="{% static 'img/team/tp_65.png'%}" class="pull-left" alt=""/>
+                <h6><a href="#">1</a></h6>
+                <p>
+                    timpower90
+                </p>
+            </li>
+            <li>
+                <img src="{% static 'img/team/jl_65.png'%}" class="pull-left" alt=""/>
+                <h6><a href="#">2</a></h6>
+                <p>
+                    lavren55
+                </p>
+            </li>
+            <li>
+                <img src="{% static 'img/team/nr_65.png'%}" class="pull-left" alt=""/>
+                <h6><a href="#">3</a></h6>
+                <p>
+                    pivitparkour94
+                </p>
+            </li>
+            <li>
+                <img src="{% static 'img/team/jt_65.png'%}" class="pull-left" alt=""/>
+                <h6><a href="#">4</a></h6>
+                <p>
+                    jtcodegod
+                </p>
+            </li>
+            <li>
+                <img src="{% static 'img/team/jr_65.png'%}" class="pull-left" alt=""/>
+                <h6><a href="#">5</a></h6>
+                <p>
+                    {{ object.big_name }}
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="widget">
+        <h5 class="widgetheading">Popular scores from 3 darts</h5>
+        <ul class="tags">
+            <li><a href="#">26</a></li>
+            <li><a href="#">32</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">19</a></li>
+            <li><a href="#">132</a></li>
+            <li><a href="#">180</a></li>
+        </ul>
+    </div>
+    <div class="bottom-article">
+        <ul class="meta-post">
+            <li><i class="icon-user"></i><a href="#"> Admin</a></li>
+            <li><i class="icon-folder-open"></i><a href="#"> Blog</a></li>
+            <li><i class="icon-tags"></i><a href="#">Web design</a></li>
+        </ul>
+    </div>
+</aside>
