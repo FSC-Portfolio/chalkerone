@@ -2,35 +2,58 @@
 {% load static %}
 {% block content %}
 
-<section id="content">
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-            <h1>Registered Clubs</h1>
+    {% include 'club/inserts/page_header.html' %}
 
-                {% for club in object_list %}
-              <h2><a href="{% url 'view_single_club' club.pk %}">{{ club.club_name }}</a></h2>
-                <ul>
-                    <li>Established: {{ club.date_established }}</li>
-                    <li>{{ club.get_club_status_display }}</li>
-                    <li>Fees: {{ club.club_member_fees }}</li>
-                    <li>Meets: {{ club.get_club_meeting_frequency_display }}</li>
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <!-- Left Column -->
+                    {% include 'club/inserts/left_column.html' %}
+                </div>
+                <div class="span8">
+                    {% for club in object_list %}
+                        <article>
+                            <div class="row">
+                                <div class="span8">
+                                    {#                        {% if user.id == object.id %}#}
+                                    {#                            <a href="{% url 'update_single_player' object.pk %}">+ Edit your profile</a>#}
+                                    {#                        {% endif %}#}
 
-                </ul>
-                {% endfor %}
+                                    <!-- club info -->
+                                    <div class="about-author">
+                                        <a href="{% url 'view_single_club' club.pk %}" class="thumbnail align-left">
+                                            <img src="{% static 'img/team/' %}{% filter force_escape|lower %}{{ club.club_name }}{% endfilter %}.png" alt=""/></a>
+                                        <h5><strong><a
+                                                href="{% url 'view_single_club' club.pk %}">{{ club.club_name }}</a></strong>,
+                                            {{ club.get_club_status_display }} club,
+                                            meets {{ club.get_club_meeting_frequency_display }},
+                                            ${{ club.club_member_fees }}.
 
-          </div>
-        </div>
-        <!-- divider -->
-        <div class="row">
-          <div class="span12">
-            <div class="solidline">
+                                        </h5>
+
+                                        <p>est: {{ club.date_established }}</p>
+
+                                        <p>
+                                            Last played [club] and [won/lost] by [points]. Our statistics show your
+                                            closest matched club is [club].
+                                            this club ranks 3489483 in the system behind [club] and in front of [club].
+                                        </p>
+                                        <a href="{% url 'view_single_club' club.pk %}"><i class="icon-plus"></i> Request to join</a>&nbsp;
+                                        <a href="{% url 'view_single_club' club.pk %}"><i class="icon-group"></i> View members</a>&nbsp;
+                                        <a href="{% url 'view_single_club' club.pk %}"><i class="icon-tasks"></i> View stats</a>&nbsp;
+                                        <a href="{% url 'view_single_club' club.pk %}"><i class="icon-info-sign"></i> Ask a question</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %}
+
+                </div>
             </div>
-          </div>
         </div>
-        <!-- end divider -->
-
-      </div>
     </section>
 
 {% endblock content %}

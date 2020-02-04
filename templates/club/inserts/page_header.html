@@ -1,0 +1,24 @@
+{% load static %}
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <div class="inner-heading">
+                    <h2>{% if object.big_name %}
+                            {{object.big_name}}
+                        {% else %}
+                            {{ object.player_id }}
+                        {% endif %}
+                    </h2>
+                </div>
+            </div>
+            <div class="span8">
+                <ul class="breadcrumb">
+                    <li><a href="{% url 'home' %}"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+                    <li><a href="{% url 'view_players' %}">Players</a><i class="icon-angle-right"></i></li>
+                    <li class="active">Your profile</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

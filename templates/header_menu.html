@@ -37,31 +37,23 @@
               <div class="navigation">
                 <nav>
                   <ul class="nav topnav">
-                    <li class="dropdown active">
-                      <a href="{% url 'home' %}">Home <i class="icon-angle-down"></i></a>
+                    <li>
+                      <a href="{% url 'home' %}">Home</a>
 {#                      <ul class="dropdown-menu">#}
 {#                        <li><a href="index-alt2.html">Homepage 2</a></li>#}
 {#                        <li><a href="index-alt3.html">Homepage 3</a></li>#}
 {#                      </ul>#}
                     </li>
-                    <li class="dropdown">
-                      <a href="#">Features <i class="icon-angle-down"></i></a>
-{#                      <ul class="dropdown-menu">#}
-{#                        <li><a href="typography.html">Typography</a></li>#}
-{#                        <li><a href="table.html">Table</a></li>#}
-{#                        <li><a href="components.html">Components</a></li>#}
-{#                        <li><a href="animations.html">56 Animations</a></li>#}
-{#                        <li><a href="icons.html">Icons</a></li>#}
-{#                        <li><a href="icon-variations.html">Icon variations</a></li>#}
-{#                        <li class="dropdown"><a href="#">3 Sliders <i class="icon-angle-right"></i></a>#}
-{#                          <ul class="dropdown-menu sub-menu-level1">#}
-{#                            <li><a href="index.html">Nivo slider</a></li>#}
-{#                            <li><a href="index-alt2.html">Slit slider</a></li>#}
-{#                            <li><a href="index-alt3.html">Parallax slider</a></li>#}
-{#                          </ul>#}
-{#                        </li>#}
-{#                      </ul>#}
-                    </li>
+
+                  <li class="dropdown">
+                      <a href="#">About <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="{% url 'features' %}">Features</a></li>
+                          <li><a href="{% url 'privacy' %}">Privacy</a></li>
+                          <li><a href="{% url 'terms_of_service' %}">Terms of Service</a></li>
+                          <li><a href="#">Tutorials</a></li>
+                      </ul>
+                  </li>
 {#                    <li class="dropdown">#}
 {#                      <a href="#">Pages <i class="icon-angle-down"></i></a>#}
 {#                      <ul class="dropdown-menu">#}
@@ -93,11 +85,18 @@
 {#                      <a href="#">Contact </a>#}
 {#                    </li>#}
                       <li>
+                          <a href="#">Leagues</a>
+                      </li>
+                      <li>
                           <a href="{% url 'view_all_clubs' %}">Clubs</a>
                       </li>
                       <li>
                           <a href="{% url 'view_players' %}">Players</a>
                       </li>
+                      <li>
+                          <a href="#">Live Games</a>
+                      </li>
+
                   </ul>
                 </nav>
               </div>
