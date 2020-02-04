@@ -139,12 +139,12 @@ class PlayerStatistic(BaseModel):
         null=True,
     )
 
-    def __str__(self):
-        if self.big_name:
-            big_name = self.big_name
-        else:
-            big_name = self.id
-        return "%s" % big_name
+    # def __str__(self):
+    #     if self.big_name:
+    #         big_name = self.big_name
+    #     else:
+    #         big_name = self.id
+    #     return "%s" % big_name
 
 
 # class Post(models.Model):
