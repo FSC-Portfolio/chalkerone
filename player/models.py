@@ -144,7 +144,7 @@ class PlayerStatistic(BaseModel):
             big_name = self.big_name
         else:
             big_name = self.id
-        return big_name
+        return "%s" % big_name
 
 
 # class Post(models.Model):
