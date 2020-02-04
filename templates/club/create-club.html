@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% include 'club/inserts/page_header.html' %}
+
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <!-- Left Column -->
+                    {% include 'club/inserts/left_column.html' %}
+                </div>
+                <div class="span8">
+
+                        <article>
+                            <div class="row">
+                                <div class="span8">
+                                <form method="post" enctype="multipart/form-data">
+                                  {% csrf_token %}
+                                  {{ form.as_p }}
+                                  <button type="submit">Submit New Post</button>
+                                </form>
+                            </form>
+
+
+                                </div>
+                            </div>
+                        </article>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

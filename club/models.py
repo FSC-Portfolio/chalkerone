@@ -50,5 +50,11 @@ class DartClub(BaseModel):
         null=False,
     )
 
+    club_banner_image = models.ImageField(
+        upload_to='images/clubs/',
+        blank=True,
+        null=True,
+    )
+
     def __str__(self):
         return self.club_name
