@@ -139,8 +139,8 @@ class PlayerStatistic(BaseModel):
         null=True,
     )
 
-    def __str__(self):
-        return self.big_name
+    # def __str__(self):
+    #     return self.big_name
 
 
 # class Post(models.Model):
