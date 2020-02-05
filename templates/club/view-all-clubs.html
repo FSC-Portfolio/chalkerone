@@ -22,10 +22,15 @@
 
                                     <!-- club info -->
                                     <div class="about-author">
-                                        <a href="{% url 'view_single_club' club.pk %}" class="thumbnail align-left">
-                                            <img src="{% static 'img/team/' %}{% filter force_escape|lower %}{{ club.club_name }}{% endfilter %}.png" alt=""/></a>
-                                        <h5><strong><a
-                                                href="{% url 'view_single_club' club.pk %}">{{ club.club_name }}</a></strong>,
+                                        <a href="{% url 'view_single_club' club.pk %}">
+                                            {% if club.club_banner_image %}
+                                                <img class="card-img-top" src="{% url 'home' %}media/{{ club.club_banner_image  }}" alt="Club Banner">
+                                            {% else %}
+                                                <img class="card-img-top" src="{% static 'img/ChalkerOne.png' %}" alt="Club Banner">
+                                            {% endif %}
+                                        </a>
+
+                                        <h5><strong><a href="{% url 'view_single_club' club.pk %}">{{ club.club_name }}</a></strong>,
                                             {{ club.get_club_status_display }} club,
                                             meets {{ club.get_club_meeting_frequency_display }},
                                             ${{ club.club_member_fees }}.

@@ -1,6 +1,9 @@
 {% load static %}
 <aside class="left-sidebar">
     <div class="widget">
+        <a href="{% url 'create_club' %}"><i class="icon-plus"></i> Create a club!</a>
+    </div>
+    <div class="widget">
         <form class="form-search">
             <input placeholder="Type something" type="text" class="input-medium search-query">
             <button type="submit" class="btn btn-square btn-theme">Search</button>
