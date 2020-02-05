@@ -6,8 +6,10 @@
                 <div class="inner-heading">
                     <h2>{% if object.big_name %}
                             {{object.big_name}}
-                        {% else %}
+                        {% elif object.playerid %}
                             {{ object.player_id }}
+                        {% else %}
+                        Clubs
                         {% endif %}
                     </h2>
                 </div>
