@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+{% block content %}
+
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <h1>Tutorials</h1>
+                <h2>x01</h2>
+                <p>The game of x01 is a favourite amongst the darts community, both socailly and competitively. It is easy to learn, adn, with the right strategy, not too hard to get a winn up!</p>
+                <p>Each player starts with a set number of points, most commonly 501 or 301 for a shorter game.</p>
+                <p>Throw one dart each at the bullseye to see who plays first, then, each player takes throws three darts at the board, the objective being to score as high as possible, to reduce your points to zero before the other player.</p>
+                <p>There is a catch - to win, you need to finish with
+                    <ul>
+                        <li>
+                            An exact number of points
+                        </li>
+                        <li>
+                            And on a double score.
+                        </li>
+                    </ul>
+                ie, if your score is 32, you need to finish with a double 16. If you throw a 16, and have sixteen left, then you need to now throw a double eight. If you get a single nine, you bust and are still on 32.
+                </p>
+                <p>Here's a tip for new players, the experienced people will go for triple 20's, aim for triple 19's, the surrounding numbers are higher than what surrounds 20 (ie one and five) so should you miss, you'll still get a reasonable score.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock content %}

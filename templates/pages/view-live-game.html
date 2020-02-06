@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'pages/inserts/page_header.html' %}
+
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+            <!-- Left Column -->
+                {% include 'player/inserts/left_column.html' %}
+            </div>
+            <div class="span8">
+                <article>
+                    <div class="row">
+                        <div class="span8">
+                            {% include 'pages/inserts/live-game-matchup.html' %}
+                            {% include 'pages/inserts/live-game-table.html' %}
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
